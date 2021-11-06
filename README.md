@@ -1,4 +1,4 @@
-# readipy
+# PyDFreader
 Get the audiobook experience without shelling the Audible bucks! Python program that lets you select a PDF, the page you would like to have start reading from, and then an automated voice reads your PDF out loud.
 
 Instructions
