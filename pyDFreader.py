@@ -10,12 +10,15 @@ root.withdraw()
 # Specify file type (PDF file type)
 root.filename = filedialog.askopenfilename(initialdir="/", title="Select file", filetypes=(("pdf files", "*.pdf"), ("all files", "*.*")))
 print(root.filename)
-pdfFile = root.filename
+#pdfFile = root.filename
 
 # Assign the selected PDF file to the variable, book
-book = open(str(pdfFile), 'rb')
+book = open(str(root.filename), 'rb')
 
 # pdfRead assigned to the task of PdfFileReader
+# for js use PDF.js: https://mozilla.github.io/pdf.js/examples/
+# js: pdfjsLib.getDocument('helloworld.pdf')
+
 pdfRead = PyPDF2.PdfFileReader(book)
 
 # This line finds the total number of pages the selected PDF file has
