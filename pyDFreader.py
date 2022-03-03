@@ -22,7 +22,8 @@ book = open(str(root.filename), 'rb')
 pdfRead = PyPDF2.PdfFileReader(book)
 
 # This line finds the total number of pages the selected PDF file has
-totalPages = pdfRead.numPages
+# totalPages = pdfRead.numPages
+totalPages = PyPDF2.PdfFileReader(book).numPages
 print('The total number of pages in the PDF you selected is: ' + str(totalPages))
 
 speaker = pyttsx3.init()
@@ -34,7 +35,7 @@ inputPage = int(whatPage) - 1
 
 for i in range(inputPage, totalPages, 1):
     print('Now reading page: ' + str(i + 1))
-    bPage = pdfRead.getPage(i)
+    bPage = PyPDF2.PdfFileReader(book).getPage(i)
     text = bPage.extractText()
     speaker.say(text)
     speaker.runAndWait()
