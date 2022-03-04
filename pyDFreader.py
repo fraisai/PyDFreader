@@ -1,5 +1,7 @@
 # Text to speech conversion library
 import pyttsx3
+
+# allows manipulation of PDF docs
 import PyPDF2
 
 from tkinter import filedialog
