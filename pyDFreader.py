@@ -4,6 +4,7 @@ import pyttsx3
 # allows manipulation of PDF docs
 import PyPDF2
 
+# standard GUI library for Python
 from tkinter import filedialog
 from tkinter import *
 
